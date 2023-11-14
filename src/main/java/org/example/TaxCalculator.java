@@ -1,14 +1,31 @@
 package org.example;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 
 public class TaxCalculator {
-    HashMap<Integer,HashMap<Integer,ArrayList<ArrayList<Integer>>>> slab;
-    private byte regimeId;
-    private byte ageGroupId;
+    private HashMap<Integer,HashMap<Integer,ArrayList<ArrayList<Integer>>>> slab;
+    private Integer regimeId;
+
+    public Integer getRegimeId() {
+        return regimeId;
+    }
+
+    public void setRegimeId(Integer regimeId) {
+        this.regimeId = regimeId;
+    }
+
+    public Integer getAgeGroupId() {
+        return ageGroupId;
+    }
+
+    public void setAgeGroupId(Integer ageGroupId) {
+        this.ageGroupId = ageGroupId;
+    }
+
+    private Integer ageGroupId;
     private Integer deductedAmount;
     private Integer taxableAmount;
     private Integer taxAmount;
@@ -55,13 +72,9 @@ public class TaxCalculator {
         this.surCharge = surCharge;
     }
 
-    public void setRegime(byte id){
-        this.regimeId = id;
-    }
 
-    public void setAgeGroupId(byte id){
-        this.ageGroupId = id;
-    }
+
+
 
     private void initSlab(){
 
@@ -71,6 +84,8 @@ public class TaxCalculator {
         slab = new HashMap<Integer,HashMap<Integer,ArrayList<ArrayList<Integer>>>>();
 
         slab.put(1,new HashMap<Integer,ArrayList<ArrayList<Integer>>>());
+        slab.put(2,new HashMap<Integer,ArrayList<ArrayList<Integer>>>());
+
         // < 60
         ArrayList<ArrayList<Integer>> less60 = new ArrayList<ArrayList<Integer>>();
         ArrayList<ArrayList<Integer>> a60l80 = new ArrayList<ArrayList<Integer>>();
@@ -78,106 +93,32 @@ public class TaxCalculator {
         ArrayList<ArrayList<Integer>> all = new ArrayList<ArrayList<Integer>>();
 
 
-        ArrayList<Integer> data = new ArrayList<Integer>();
-        data.add(250000);
-        data.add(0);
-        less60.add(data);
-        data.clear();
 
-        data.add(250000);
-        data.add(5);
-        less60.add(data);
-        data.clear();
-
-        data.add(500000);
-        data.add(20);
-        less60.add(data);
-        data.clear();
-
-        data.add(-1);
-        data.add(30);
-        less60.add(data);
-        data.clear();
+        less60.add(new ArrayList<>(Arrays.asList(250000,0)));
+        less60.add(new ArrayList<>(Arrays.asList(250000,5)));
+        less60.add(new ArrayList<>(Arrays.asList(500000,20)));
+        less60.add(new ArrayList<>(Arrays.asList(-1,30)));
         slab.get(1).put(1,less60);
 
-
-
-        data.add(300000);
-        data.add(0);
-        a60l80.add(data);
-        data.clear();
-
-        data.add(200000);
-        data.add(5);
-        a60l80.add(data);
-        data.clear();
-
-        data.add(500000);
-        data.add(20);
-        a60l80.add(data);
-        data.clear();
-
-        data.add(-1);
-        data.add(30);
-        a60l80.add(data);
-        data.clear();
+        a60l80.add(new ArrayList<>(Arrays.asList(300000,0)));
+        a60l80.add(new ArrayList<>(Arrays.asList(200000,5)));
+        a60l80.add(new ArrayList<>(Arrays.asList(500000,20)));
+        a60l80.add(new ArrayList<>(Arrays.asList(-1,30)));
         slab.get(1).put(2,a60l80);
 
-        data.add(500000);
-        data.add(0);
-        a80.add(data);
-        data.clear();
-
-        data.add(500000);
-        data.add(20);
-        a80.add(data);
-        data.clear();
-
-        data.add(-1);
-        data.add(30);
-        a80.add(data);
-        data.clear();
+        a80.add(new ArrayList<>(Arrays.asList(500000,0)));
+        a80.add(new ArrayList<>(Arrays.asList(500000,20)));
+        a80.add(new ArrayList<>(Arrays.asList(-1,30)));
         slab.get(1).put(3,a80);
 
-
-        data.add(250000);
-        data.add(0);
-        all.add(data);
-        data.clear();
-
-        data.add(250000);
-        data.add(5);
-        all.add(data);
-        data.clear();
-
-        data.add(250000);
-        data.add(10);
-        all.add(data);
-        data.clear();
-
-        data.add(250000);
-        data.add(15);
-        all.add(data);
-        data.clear();
-
-        data.add(250000);
-        data.add(20);
-        all.add(data);
-        data.clear();
-
-        data.add(250000);
-        data.add(25);
-        all.add(data);
-        data.clear();
-
-
-        data.add(-1);
-        data.add(30);
-        all.add(data);
-        data.clear();
-
+        all.add(new ArrayList<>(Arrays.asList(250000,0)));
+        all.add(new ArrayList<>(Arrays.asList(250000,5)));
+        all.add(new ArrayList<>(Arrays.asList(250000,10)));
+        all.add(new ArrayList<>(Arrays.asList(250000,15)));
+        all.add(new ArrayList<>(Arrays.asList(250000,20)));
+        all.add(new ArrayList<>(Arrays.asList(250000,25)));
+        all.add(new ArrayList<>(Arrays.asList(-1,30)));
         slab.get(2).put(0,all);
-
 
     }
 
@@ -189,34 +130,34 @@ public class TaxCalculator {
     public void init(){
 
         Scanner scanner = new Scanner(System.in);
-        byte schemeId;
+        Integer schemeId;
 
         while(true) {
             System.out.println("Select you regime:\n1.Old Tax Regime\n2.New tax Regime\n\n0.To exit");
-            schemeId = scanner.nextByte();
+            schemeId = scanner.nextInt();
             if (schemeId == 0)
                 return;
             if (schemeId != 1 && schemeId != 2) {
                 System.out.println("Select valid schemeId\n");
                 continue;
             }
-            setRegime(schemeId);
             break;
         }
+        setRegimeId(schemeId);
 
-        byte ageGroup;
+        Integer ageGroup=0;
 
         while(schemeId==1){
             System.out.println("Select your age group:\n1. Below 60 year\n2. 60 or above 60 and below 80\n3. 80 or above 80\n");
-            ageGroup = scanner.nextByte();
+            ageGroup = scanner.nextInt();
             if(ageGroup!=1 && ageGroup!=2 && ageGroup!=3)
             {
                 System.out.println("Please select correct age group\n");
                 continue;
             }
-            setAgeGroupId(ageGroup);
             break;
         }
+        setAgeGroupId(ageGroup);
 
         Integer income;
         System.out.println("Enter your income:");
@@ -226,7 +167,7 @@ public class TaxCalculator {
         setDeductedAmount(deductedAmount);
         Integer taxableAmount = income-deductedAmount;
         setTaxableAmount(taxableAmount);
-        Integer taxAmount = calcTax(taxableAmount);
+        Integer taxAmount = calcTax(taxableAmount,getRegimeId(),getAgeGroupId());
         setTaxAmount(taxAmount);
         Integer surCharge= calcSurcharge(taxAmount, taxableAmount);
         setSurCharge(surCharge);
@@ -234,17 +175,38 @@ public class TaxCalculator {
         Integer netTax = taxAmount + surCharge;
         setNetTax(netTax);
 
-        System.out.println("You have to pay " + netTax + "as tax!!");
+        System.out.println("You have to pay " + netTax + " as tax!!");
     }
-    Integer calcTax(Integer taxableAmount){
+    Integer calcTax(Integer taxableAmount, Integer regimeId, Integer ageGroupId){
 
+            Integer taxAmount = 0;
+
+            ArrayList<ArrayList<Integer>> slabs = slab.get(regimeId).get(ageGroupId);
+
+            for(int i=0;i<slabs.size();i++){
+
+                Integer minA=0;
+                if(taxableAmount <= 0)
+                    break;
+
+                if(i==slabs.size()-1){
+                    minA = taxableAmount;
+                }else{
+                    minA = Math.min(taxableAmount,slabs.get(i).get(0));
+                }
+
+                taxAmount += (minA * slabs.get(i).get(1))/100;
+                taxableAmount -= minA;
+            }
+
+            return taxAmount;
     }
     Integer calcDeduction(Integer income){
         return 0;
     }
 
     Integer calcSurcharge(Integer taxAmount, Integer taxableAmount){
-        double surCharge = 0;
+        Double surCharge = 0.0;
         if(taxableAmount>5000000 && taxableAmount<=10000000){
             surCharge = 0.1*taxAmount;
         }
@@ -257,8 +219,9 @@ public class TaxCalculator {
         else if(taxableAmount>50000000){
             surCharge = 0.37*taxAmount;
         }
-        new Integer
-        return new Integer((int)surCharge);
+
+        Integer var = surCharge.intValue();
+        return var;
     }
 
 }
