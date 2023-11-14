@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class TaxCalculator {
     private HashMap<Integer,HashMap<Integer,ArrayList<ArrayList<Integer>>>> slab;
     private Integer regimeId;
+    private Scanner scanner;
 
     public Integer getRegimeId() {
         return regimeId;
@@ -32,9 +33,6 @@ public class TaxCalculator {
     private Integer surCharge;
     private Integer netTax;
 
-    public Integer getNetTax() {
-        return netTax;
-    }
 
     public void setNetTax(Integer netTax) {
         this.netTax = netTax;
@@ -71,10 +69,6 @@ public class TaxCalculator {
     public void setSurCharge(Integer surCharge) {
         this.surCharge = surCharge;
     }
-
-
-
-
 
     private void initSlab(){
 
@@ -126,10 +120,9 @@ public class TaxCalculator {
         initSlab();
     }
 
-
     public void init(){
 
-        Scanner scanner = new Scanner(System.in);
+        scanner = new Scanner(System.in);
         Integer schemeId;
 
         while(true) {
@@ -163,7 +156,7 @@ public class TaxCalculator {
         System.out.println("Enter your income:");
         income = scanner.nextInt();
 
-        Integer deductedAmount = calcDeduction(income);
+        Integer deductedAmount = calcDeduction(income, getRegimeId());
         setDeductedAmount(deductedAmount);
         Integer taxableAmount = income-deductedAmount;
         setTaxableAmount(taxableAmount);
@@ -201,10 +194,36 @@ public class TaxCalculator {
 
             return taxAmount;
     }
-    Integer calcDeduction(Integer income){
-        return 0;
-    }
+    Integer calcDeduction(Integer income, Integer regimeId){
 
+        Integer deductionAmount80c = 0;
+        Integer deductionAmount80ccd1b = 0;
+        Integer deductionAmount80d = 0;
+
+        // for old regime
+        if(regimeId==1){
+            System.out.println("Enter amount of Life Insurance Premium (0 if none)");
+            deductionAmount80c += scanner.nextInt();
+            System.out.println("Enter amount of Provident Fund (0 if none)");
+            deductionAmount80c += scanner.nextInt();
+            System.out.println("Enter value of equity shares that you hold (0 if none)");
+            deductionAmount80c += scanner.nextInt();
+            System.out.println("Enter amount of tution fees (0 if none)");
+            deductionAmount80c += scanner.nextInt();
+            deductionAmount80c = Math.min(deductionAmount80c, 1500000);
+
+            System.out.println("Enter Pension Scheme of Central Goverment amount(0 if none)");
+            deductionAmount80ccd1b = Math.min(scanner.nextInt(), 50000);
+
+        }
+        // for new regime
+        else{
+            System.out.println("Enter Pension Scheme of Central Goverment amount(0 if none)");
+            deductionAmount80ccd1b = Math.min(scanner.nextInt(), 50000);
+        }
+
+        return deductionAmount80ccd1b + deductionAmount80c + deductionAmount80d;
+    }
     Integer calcSurcharge(Integer taxAmount, Integer taxableAmount){
         Double surCharge = 0.0;
         if(taxableAmount>5000000 && taxableAmount<=10000000){
