@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a58bab6-21ca-40ac-8b7a-b42f9444fe70" name="Changes" comment="Deduction added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/TestPathsAndRequirements" afterDir="false" />
+    <list default="true" id="8a58bab6-21ca-40ac-8b7a-b42f9444fe70" name="Changes" comment="test requirements and test paths calculated">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/FinalTestPaths" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1699950093187</updated>
       <workItem from="1699950094240" duration="5661000" />
-      <workItem from="1699966976040" duration="9575000" />
+      <workItem from="1699966976040" duration="10596000" />
     </task>
     <task id="LOCAL-00001" summary="Business Logic Done">
       <created>1699973879368</created>
@@ -88,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699975222856</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="test requirements and test paths calculated">
+      <created>1699981920515</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699981920515</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,7 +115,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Business Logic Done" />
     <MESSAGE value="Deduction added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deduction added" />
+    <MESSAGE value="test requirements and test paths calculated" />
+    <option name="LAST_COMMIT_MESSAGE" value="test requirements and test paths calculated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
