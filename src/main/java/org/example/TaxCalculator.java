@@ -1,9 +1,6 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
 
 public class TaxCalculator {
     private HashMap<Integer,HashMap<Integer,ArrayList<ArrayList<Integer>>>> slab;
@@ -120,55 +117,61 @@ public class TaxCalculator {
         initSlab();
     }
 
-    public void init(){
+    public Integer init(){
+        try{
+            scanner = new Scanner(System.in);
+            Integer schemeId;
 
-        scanner = new Scanner(System.in);
-        Integer schemeId;
-
-        while(true) {
-            System.out.println("Select you regime:\n1.Old Tax Regime\n2.New tax Regime\n\n0.To exit");
-            schemeId = scanner.nextInt();
-            if (schemeId == 0)
-                return;
-            if (schemeId != 1 && schemeId != 2) {
-                System.out.println("Select valid schemeId\n");
-                continue;
+            while(true) {
+                System.out.println("Select you regime:\n1.Old Tax Regime\n2.New tax Regime\n\n0.To exit");
+                schemeId = scanner.nextInt();
+                if (schemeId == 0)
+                    return -1;
+                if (schemeId != 1 && schemeId != 2) {
+                    System.out.println("Select valid schemeId\n");
+                    continue;
+                }
+                break;
             }
-            break;
-        }
-        setRegimeId(schemeId);
+            setRegimeId(schemeId);
 
-        Integer ageGroup=0;
+            Integer ageGroup=0;
 
-        while(schemeId==1){
-            System.out.println("Select your age group:\n1. Below 60 year\n2. 60 or above 60 and below 80\n3. 80 or above 80\n");
-            ageGroup = scanner.nextInt();
-            if(ageGroup!=1 && ageGroup!=2 && ageGroup!=3)
-            {
-                System.out.println("Please select correct age group\n");
-                continue;
+            while(schemeId==1){
+                System.out.println("Select your age group:\n1. Below 60 year\n2. 60 or above 60 and below 80\n3. 80 or above 80\n");
+                ageGroup = scanner.nextInt();
+                if(ageGroup!=1 && ageGroup!=2 && ageGroup!=3)
+                {
+                    System.out.println("Please select correct age group\n");
+                    continue;
+                }
+                break;
             }
-            break;
+            setAgeGroupId(ageGroup);
+
+            Integer income;
+            System.out.println("Enter your income:");
+            income = scanner.nextInt();
+
+
+            Integer deductedAmount = calcDeduction(income, getRegimeId());
+            setDeductedAmount(deductedAmount);
+            Integer taxableAmount = income-deductedAmount;
+            setTaxableAmount(taxableAmount);
+            Integer taxAmount = calcTax(taxableAmount,getRegimeId(),getAgeGroupId());
+            setTaxAmount(taxAmount);
+            Integer surCharge= calcSurcharge(taxAmount, taxableAmount);
+            setSurCharge(surCharge);
+
+            Integer netTax = taxAmount + surCharge;
+            setNetTax(netTax);
+
+            System.out.println("You have to pay " + netTax + " as tax!!");
+            return netTax;
         }
-        setAgeGroupId(ageGroup);
-
-        Integer income;
-        System.out.println("Enter your income:");
-        income = scanner.nextInt();
-
-        Integer deductedAmount = calcDeduction(income, getRegimeId());
-        setDeductedAmount(deductedAmount);
-        Integer taxableAmount = income-deductedAmount;
-        setTaxableAmount(taxableAmount);
-        Integer taxAmount = calcTax(taxableAmount,getRegimeId(),getAgeGroupId());
-        setTaxAmount(taxAmount);
-        Integer surCharge= calcSurcharge(taxAmount, taxableAmount);
-        setSurCharge(surCharge);
-
-        Integer netTax = taxAmount + surCharge;
-        setNetTax(netTax);
-
-        System.out.println("You have to pay " + netTax + " as tax!!");
+        catch(InputMismatchException exception){
+            return -1;
+        }
     }
     Integer calcTax(Integer taxableAmount, Integer regimeId, Integer ageGroupId){
 
@@ -194,7 +197,7 @@ public class TaxCalculator {
 
             return taxAmount;
     }
-    Integer calcDeduction(Integer income, Integer regimeId){
+    Integer calcDeduction(Integer income, Integer regimeId) throws InputMismatchException{
 
         Integer deductionAmount80c = 0;
         Integer deductionAmount80ccd1b = 0;

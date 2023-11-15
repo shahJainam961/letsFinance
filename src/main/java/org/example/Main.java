@@ -6,6 +6,5 @@ public class Main {
         System.out.println("Welcome to \"What's my Tax\"");
         TaxCalculator taxCalculator = new TaxCalculator();
         taxCalculator.init();
-
     }
 }
