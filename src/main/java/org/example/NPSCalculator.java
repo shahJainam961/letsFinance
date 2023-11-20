@@ -74,7 +74,7 @@ public class NPSCalculator {
     }
     
     private Long calculateReturn(){
-        Double amnt = totalInvestment * Math.pow(1 + (1.0* expectedReturnRatePerAnnum /100), timePeriod);
+        Double amnt = totalInvestment * Math.pow(1 + (1.0* expectedReturnRatePerAnnum /1200), 12*timePeriod);
         return amnt.longValue();
     }
 
