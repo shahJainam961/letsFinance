@@ -60,6 +60,7 @@ public class PPFCalculator {
         setTimePeriodInYears(tp);
 
         Long totalValue = calculateReturn();
+        System.out.println("Your total value will be : " + totalValue);
         return totalValue;
     }
 
