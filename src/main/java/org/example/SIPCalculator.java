@@ -3,7 +3,6 @@ package org.example;
 import java.util.Scanner;
 
 public class SIPCalculator {
-    Scanner scanner = new Scanner(System.in);
     Double monthlyInvestment;
     Double expectedReturnRateInPercentage;
     Double timePeriodInYear;
@@ -34,6 +33,7 @@ public class SIPCalculator {
 
     public Long init(){
         Double mi, tp, rr;
+        Scanner scanner = new Scanner(System.in);
 
         while(true){
             System.out.print("Enter your monthly investment amount : ");
