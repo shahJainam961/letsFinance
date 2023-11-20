@@ -51,7 +51,7 @@ public class LumpsumCalculator {
         while(true) {
             System.out.print("Enter rate of interest : ");
             val = scanner.nextDouble();
-            if(val>=0 && val<=100){
+            if(val>=0){
                 break;
             }
             System.out.println("Please Enter Non-negative interest rate in range 0 to 100 : ");
