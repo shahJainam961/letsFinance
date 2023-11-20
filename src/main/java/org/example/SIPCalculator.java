@@ -48,7 +48,7 @@ public class SIPCalculator {
         while(true){
             System.out.print("Enter Expected Return Rate in percentage (per annum) : ");
             rr = scanner.nextDouble();
-            if(rr>=0 && rr<=100){
+            if(rr>=0){
                 break;
             }
             System.out.println("Please enter valid return rate");
