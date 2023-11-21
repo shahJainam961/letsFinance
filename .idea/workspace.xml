@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a58bab6-21ca-40ac-8b7a-b42f9444fe70" name="Changes" comment="Choosing calc done">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PPFCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PPFCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SIPCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SIPCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SWPCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SWPCalculator.java" afterDir="false" />
+    <list default="true" id="8a58bab6-21ca-40ac-8b7a-b42f9444fe70" name="Changes" comment="EMI Calculator - Data flow coverage criteria testing done">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/EMICalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/EMICalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/EMICalculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +19,8 @@
       <list>
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -71,7 +71,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Calculator">
+  <component name="RunManager" selected="JUnit.GratuityCalculatorTest">
     <configuration name="Calculator" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="SaveMyTax" />
@@ -128,34 +128,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PPFCalculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.PPFCalculator" />
-      <module name="SaveMyTax" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <extension name="recording" autostart="false" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SIPCalculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.SIPCalculator" />
-      <module name="SaveMyTax" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <extension name="recording" autostart="false" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <module name="SaveMyTax" />
       <extension name="recording" autostart="false">
@@ -169,22 +141,54 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EMICalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SaveMyTax" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="recording" autostart="true" />
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.EMICalculatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GratuityCalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SaveMyTax" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="recording" autostart="true" />
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.GratuityCalculatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Calculator" />
       <item itemvalue="Application.Unnamed" />
       <item itemvalue="Application.EMICalculator" />
       <item itemvalue="Application.GratuityCalculator" />
       <item itemvalue="Application.NPSCalculator" />
-      <item itemvalue="Application.PPFCalculator" />
-      <item itemvalue="Application.SIPCalculator" />
+      <item itemvalue="JUnit.EMICalculatorTest" />
+      <item itemvalue="JUnit.GratuityCalculatorTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GratuityCalculatorTest" />
+        <item itemvalue="JUnit.EMICalculatorTest" />
         <item itemvalue="Application.NPSCalculator" />
         <item itemvalue="Application.EMICalculator" />
         <item itemvalue="Application.GratuityCalculator" />
-        <item itemvalue="Application.PPFCalculator" />
-        <item itemvalue="Application.SIPCalculator" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +205,7 @@
       <workItem from="1700041027890" duration="4531000" />
       <workItem from="1700463382940" duration="20484000" />
       <workItem from="1700541063650" duration="1888000" />
-      <workItem from="1700543592152" duration="882000" />
+      <workItem from="1700543592152" duration="6487000" />
     </task>
     <task id="LOCAL-00001" summary="Business Logic Done">
       <created>1699973879368</created>
@@ -294,7 +298,21 @@
       <option name="project" value="LOCAL" />
       <updated>1700542107457</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="exception handled">
+      <created>1700544493867</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1700544493867</updated>
+    </task>
+    <task id="LOCAL-00015" summary="EMI Calculator - Data flow coverage criteria testing done">
+      <created>1700569470979</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1700569470979</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,7 +344,9 @@
     <MESSAGE value="NPS Calculator in progress" />
     <MESSAGE value="NPS and TAX bit left to do" />
     <MESSAGE value="Choosing calc done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Choosing calc done" />
+    <MESSAGE value="exception handled" />
+    <MESSAGE value="EMI Calculator - Data flow coverage criteria testing done" />
+    <option name="LAST_COMMIT_MESSAGE" value="EMI Calculator - Data flow coverage criteria testing done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -335,6 +355,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/TaxCalculator.java</url>
           <line>165</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/EMICalculatorTest.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
