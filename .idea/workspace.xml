@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a58bab6-21ca-40ac-8b7a-b42f9444fe70" name="Changes" comment="folder structure changed">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/SWPCalculatorTest.java" afterDir="false" />
+    <list default="true" id="8a58bab6-21ca-40ac-8b7a-b42f9444fe70" name="Changes" comment="SWP Calculator - Data Flow Coverage Criteria Done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TaxCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TaxCalculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +218,7 @@
       <workItem from="1700041027890" duration="4531000" />
       <workItem from="1700463382940" duration="20484000" />
       <workItem from="1700541063650" duration="1888000" />
-      <workItem from="1700543592152" duration="16692000" />
+      <workItem from="1700543592152" duration="17824000" />
     </task>
     <task id="LOCAL-00001" summary="Business Logic Done">
       <created>1699973879368</created>
@@ -369,7 +367,28 @@
       <option name="project" value="LOCAL" />
       <updated>1700570953104</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="SWP Calculator - Data Flow Coverage Criteria Done">
+      <created>1700584211271</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1700584211271</updated>
+    </task>
+    <task id="LOCAL-00023" summary="SWP Calculator - Data Flow Coverage Criteria Done">
+      <created>1700584219186</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1700584219186</updated>
+    </task>
+    <task id="LOCAL-00024" summary="SWP Calculator - Data Flow Coverage Criteria Done">
+      <created>1700584228979</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1700584228979</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,7 +427,8 @@
     <MESSAGE value="PPF Calculator - Data flow coverage criteria testing done" />
     <MESSAGE value="SIP Calculator - Data flow coverage criteria testing done" />
     <MESSAGE value="folder structure changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="folder structure changed" />
+    <MESSAGE value="SWP Calculator - Data Flow Coverage Criteria Done" />
+    <option name="LAST_COMMIT_MESSAGE" value="SWP Calculator - Data Flow Coverage Criteria Done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

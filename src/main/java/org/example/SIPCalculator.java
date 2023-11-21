@@ -33,38 +33,38 @@ public class SIPCalculator {
 
     public Long init(){
         try{
-            Double mi, tp, rr;
+            Double val;
             Scanner scanner = new Scanner(System.in);
 
             while(true){
                 System.out.print("Enter your monthly investment amount : ");
-                mi = scanner.nextDouble();
-                if(mi>=0){
+                val = scanner.nextDouble();
+                if(val>=0){
                     break;
                 }
                 System.out.println("Please enter positive investment amount : ");
             }
-            setMonthlyInvestment(mi);
+            setMonthlyInvestment(val);
 
             while(true){
                 System.out.print("Enter Expected Return Rate in percentage (per annum) : ");
-                rr = scanner.nextDouble();
-                if(rr>=0){
+                val = scanner.nextDouble();
+                if(val>=0){
                     break;
                 }
                 System.out.println("Please enter valid return rate");
             }
-            setExpectedReturnRateInPercentage(rr*1.0/12);
+            setExpectedReturnRateInPercentage(val*1.0/12);
 
             while(true){
                 System.out.print("Enter time period for which you want to invest : ");
-                tp = scanner.nextDouble();
-                if(tp>=0){
+                val = scanner.nextDouble();
+                if(val>=0){
                     break;
                 }
                 System.out.println("Please enter valid return rate");
             }
-            setTimePeriodInYear(tp);
+            setTimePeriodInYear(val);
 
             Long totalValue = calculateReturn();
             System.out.println("Your total value will be : " + totalValue);
