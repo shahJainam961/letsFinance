@@ -5,95 +5,95 @@ import java.util.*;
 public class TaxCalculator {
     private HashMap<Integer,HashMap<Integer,ArrayList<ArrayList<Integer>>>> slab;
 
-    private Integer type;
+    private Long type;
 
-    private Integer regimeId;
+    private Long regimeId;
 
     private Scanner scanner;
 
-    private Integer ageGroupId;
+    private Long ageGroupId;
 
-    private Integer deductedAmount;
+    private Double deductedAmount;
 
-    private Integer taxableAmount;
+    private Double taxableAmount;
 
-    private Integer taxAmount;
+    private Double taxAmount;
 
-    private Integer surCharge;
+    private Double surCharge;
 
-    private Integer netTax;
+    private Double netTax;
 
-    private Integer healthAndEduCess;
+    private Double healthAndEduCess;
 
-    public Integer getType() {
+    public Long getType() {
         return type;
     }
 
-    public void setType(Integer type) {
+    public void setType(Long type) {
         this.type = type;
     }
 
-    public Integer getRegimeId() {
+    public Long getRegimeId() {
         return regimeId;
     }
 
-    public void setRegimeId(Integer regimeId) {
+    public void setRegimeId(Long regimeId) {
         this.regimeId = regimeId;
     }
 
-    public Integer getAgeGroupId() {
+    public Long getAgeGroupId() {
         return ageGroupId;
     }
 
-    public void setAgeGroupId(Integer ageGroupId) {
+    public void setAgeGroupId(Long ageGroupId) {
         this.ageGroupId = ageGroupId;
     }
 
-    public Integer getDeductedAmount() {
+    public Double getDeductedAmount() {
         return deductedAmount;
     }
 
-    public void setDeductedAmount(Integer deductedAmount) {
+    public void setDeductedAmount(Double deductedAmount) {
         this.deductedAmount = deductedAmount;
     }
 
-    public Integer getTaxableAmount() {
+    public Double getTaxableAmount() {
         return taxableAmount;
     }
 
-    public void setTaxableAmount(Integer taxableAmount) {
+    public void setTaxableAmount(Double taxableAmount) {
         this.taxableAmount = taxableAmount;
     }
 
-    public Integer getTaxAmount() {
+    public Double getTaxAmount() {
         return taxAmount;
     }
 
-    public void setTaxAmount(Integer taxAmount) {
+    public void setTaxAmount(Double taxAmount) {
         this.taxAmount = taxAmount;
     }
 
-    public Integer getSurCharge() {
+    public Double getSurCharge() {
         return surCharge;
     }
 
-    public void setSurCharge(Integer surCharge) {
+    public void setSurCharge(Double surCharge) {
         this.surCharge = surCharge;
     }
 
-    public Integer getNetTax() {
+    public Double getNetTax() {
         return netTax;
     }
 
-    public void setNetTax(Integer netTax) {
+    public void setNetTax(Double netTax) {
         this.netTax = netTax;
     }
 
-    public Integer getHealthAndEduCess() {
+    public Double getHealthAndEduCess() {
         return healthAndEduCess;
     }
 
-    public void setHealthAndEduCess(Integer healthAndEduCess) {
+    public void setHealthAndEduCess(Double healthAndEduCess) {
         this.healthAndEduCess = healthAndEduCess;
     }
 
@@ -147,7 +147,7 @@ public class TaxCalculator {
         initSlab();
     }
 
-    public Integer init(){
+    public Long init(){
         try{
             scanner = new Scanner(System.in);
             Integer type;
@@ -156,7 +156,7 @@ public class TaxCalculator {
                 System.out.println("Select type:\n1.Individual\n2.Domestic Company\n3.Foreign Company\n0.To Exit");
                 type = scanner.nextInt();
                 if(type==0){
-                    return -1;
+                    return -1L;
                 }
                 if (type != 1 && type != 2 && type!=3) {
                     System.out.println("Select valid schemeId\n");
@@ -167,53 +167,53 @@ public class TaxCalculator {
 
             // For Foreign Company
             if(type==3){
-                Integer income;
+                Double income;
                 System.out.println("Enter your total turnOver:");
-                income = scanner.nextInt();
+                income = scanner.nextDouble();
 
-                Integer deductedAmount = calcDeductionForForeignCompany(income);
+                Double deductedAmount = calcDeductionForForeignCompany(income);
                 setDeductedAmount(deductedAmount);
-                Integer taxableAmount = income - deductedAmount;
+                Double taxableAmount = income - deductedAmount;
                 setTaxableAmount(taxableAmount);
-                Integer taxAmount = calcTaxForForeignCompany(taxableAmount);
+                Double taxAmount = calcTaxForForeignCompany(taxableAmount);
                 setTaxAmount(taxAmount);
-                Integer surCharge = calcSurchargeForForeignCompany(taxAmount, taxableAmount);
+                Double surCharge = calcSurchargeForForeignCompany(taxAmount, taxableAmount);
                 setSurCharge(surCharge);
-                Integer healthEduCess = calcHealthAndEducationCess(taxAmount);
-                Integer netTax = taxAmount + surCharge + healthEduCess;
+                Double healthEduCess = calcHealthAndEducationCess(taxAmount);
+                Double netTax = taxAmount + surCharge + healthEduCess;
                 setNetTax(netTax);
 
-                System.out.println("You have to pay " + getNetTax() + " as tax!!");
-                return netTax;
+                System.out.println("You have to pay " + getNetTax().longValue() + " as tax!!");
+                return getNetTax().longValue();
             }
             // For Domestic Company
             else if(type==2){
-                Integer income;
+                Double income;
                 System.out.println("Enter your total turnOver:");
-                income = scanner.nextInt();
+                income = scanner.nextDouble();
 
-                Integer deductedAmount = calcDeductionForDomesticCompany(income);
+                Double deductedAmount = calcDeductionForDomesticCompany(income);
                 setDeductedAmount(deductedAmount);
-                Integer taxableAmount = income - deductedAmount;
+                Double taxableAmount = income - deductedAmount;
                 setTaxableAmount(taxableAmount);
-                Integer taxAmount = calcTaxForDomesticCompany(taxableAmount);
+                Double taxAmount = calcTaxForDomesticCompany(taxableAmount);
                 setTaxAmount(taxAmount);
-                Integer surCharge = calcSurchargeForDomesticCompany(taxAmount, taxableAmount);
+                Double surCharge = calcSurchargeForDomesticCompany(taxAmount, taxableAmount);
                 setSurCharge(surCharge);
-                Integer healthEduCess = calcHealthAndEducationCess(taxAmount);
-                Integer netTax = taxAmount + surCharge + healthEduCess;
+                Double healthEduCess = calcHealthAndEducationCess(taxAmount);
+                Double netTax = taxAmount + surCharge + healthEduCess;
                 setNetTax(netTax);
 
-                System.out.println("You have to pay " + getNetTax() + " as tax!!");
-                return netTax;
+                System.out.println("You have to pay " + getNetTax().longValue() + " as tax!!");
+                return getNetTax().longValue();
             }
             // For an Individual
             else{
-                Integer schemeId;
+                Long schemeId;
 
                 while (true) {
                     System.out.println("Select you regime:\n1.Old Tax Regime\n2.New tax Regime\n");
-                    schemeId = scanner.nextInt();
+                    schemeId = scanner.nextLong();
                     if (schemeId != 1 && schemeId != 2) {
                         System.out.println("Select valid schemeId\n");
                         continue;
@@ -222,11 +222,11 @@ public class TaxCalculator {
                 }
                 setRegimeId(schemeId);
 
-                Integer ageGroup = 0;
+                Long ageGroup = 0L;
 
                 while (schemeId == 1) {
                     System.out.println("Select your age group:\n1. Below 60 year\n2. 60 or above 60 and below 80\n3. 80 or above 80\n");
-                    ageGroup = scanner.nextInt();
+                    ageGroup = scanner.nextLong();
                     if (ageGroup != 1 && ageGroup != 2 && ageGroup != 3) {
                         System.out.println("Please select correct age group\n");
                         continue;
@@ -235,33 +235,33 @@ public class TaxCalculator {
                 }
                 setAgeGroupId(ageGroup);
 
-                Integer income;
+                Double income;
                 System.out.println("Enter your income:");
-                income = scanner.nextInt();
+                income = scanner.nextDouble();
 
 
-                Integer deductedAmount = calcDeductionForIndividual(income, getRegimeId());
+                Double deductedAmount = calcDeductionForIndividual(income, getRegimeId());
                 setDeductedAmount(deductedAmount);
-                Integer taxableAmount = income - deductedAmount;
+                Double taxableAmount = income - deductedAmount;
                 setTaxableAmount(taxableAmount);
-                Integer taxAmount = calcTaxForIndividual(taxableAmount, getRegimeId(), getAgeGroupId());
+                Double taxAmount = calcTaxForIndividual(taxableAmount, getRegimeId(), getAgeGroupId());
                 setTaxAmount(taxAmount);
-                Integer surCharge = calcSurchargeForIndividual(taxAmount, taxableAmount);
+                Double surCharge = calcSurchargeForIndividual(taxAmount, taxableAmount);
                 setSurCharge(surCharge);
-                Integer healthEduCess = calcHealthAndEducationCess(taxAmount);
-                Integer netTax = taxAmount + surCharge + healthEduCess;
+                Double healthEduCess = calcHealthAndEducationCess(taxAmount);
+                Double netTax = taxAmount + surCharge + healthEduCess;
                 setNetTax(netTax);
 
-                System.out.println("You have to pay " + getNetTax() + " as tax!!");
-                return netTax;
+                System.out.println("You have to pay " + getNetTax().longValue() + " as tax!!");
+                return netTax.longValue();
             }
         }
         catch(InputMismatchException exception){
-            return -1;
+            return -1L;
         }
     }
 
-    private Integer calcSurchargeForDomesticCompany(Integer taxAmount, Integer taxableAmount) {
+    private Double calcSurchargeForDomesticCompany(Double taxAmount, Double taxableAmount) {
         Double surCharge = 0.0;
         if(taxableAmount>10000000 && taxableAmount<=100000000){
             surCharge = 0.07*taxAmount;
@@ -269,16 +269,16 @@ public class TaxCalculator {
         else if(taxableAmount>100000000){
             surCharge = 0.12*taxAmount;
         }
-        Integer var = surCharge.intValue();
-        return var;
+        return surCharge;
     }
 
-    private Integer calcTaxForDomesticCompany(Integer taxableAmount) {
-        Integer  id, taxAmount;
+    private Double calcTaxForDomesticCompany(Double taxableAmount) {
+        Long  id;
+        Double taxAmount;
 
         while (true) {
             System.out.println("Please choose which section you have opted:\n1. 115BA\n2. 115BAA\n3. 115BAB\n 4.None\n");
-            id = scanner.nextInt();
+            id = scanner.nextLong();
             if (id != 1 && id != 2 && id != 3 && id != 4) {
                 System.out.println("Please select correct section\n");
                 continue;
@@ -300,21 +300,21 @@ public class TaxCalculator {
         return taxAmount;
     }
 
-    private Integer calcDeductionForDomesticCompany(Integer income) {
-        Integer deduction = 0;
+    private Double calcDeductionForDomesticCompany(Double income) {
+        Double deduction = 0.0;
 
-        Integer ngoDonation, goDonation, totalDonation;
-        Integer netQualifyingLimit = 10*income/100;
+        Double ngoDonation, goDonation, totalDonation;
+        Double netQualifyingLimit = 10.0*income/100.0;
         System.out.println("Enter your donation to any approved funds, trust, charitable institution:");
-        ngoDonation = scanner.nextInt();
+        ngoDonation = scanner.nextDouble();
         System.out.println("Enter your donation to any government funds:");
-        goDonation = scanner.nextInt();
+        goDonation = scanner.nextDouble();
         totalDonation = Math.min(ngoDonation + goDonation, netQualifyingLimit);
         deduction += totalDonation;
         return deduction;
     }
 
-    private Integer calcSurchargeForForeignCompany(Integer taxAmount, Integer taxableAmount) {
+    private Double calcSurchargeForForeignCompany(Double taxAmount, Double taxableAmount) {
         Double surCharge = 0.0;
         if(taxableAmount>10000000 && taxableAmount<=100000000){
             surCharge = 0.02*taxAmount;
@@ -322,16 +322,16 @@ public class TaxCalculator {
         else if(taxableAmount>100000000){
             surCharge = 0.05*taxAmount;
         }
-        Integer var = surCharge.intValue();
-        return var;
+        return surCharge;
     }
 
-    private Integer calcTaxForForeignCompany(Integer taxableAmount) {
-        Integer  id, taxAmount = 0;
+    private Double calcTaxForForeignCompany(Double taxableAmount) {
+        Long  id;
+        Double taxAmount = 0.0;
 
         while (true) {
             System.out.println("Do you fall in the below category.\nRoyalty from Government or an Indian concern in pursuance of an agreement made with the Indian concern after 31st March 1961, but before 1st April 1976, or fees for rendering technical services in pursuance of an agreement made after 29th February 1964 but before 1st April 1976 and where such agreement has, in either case, been approved by the Central Government:\n1. Yes\n0. No\n");
-            id = scanner.nextInt();
+            id = scanner.nextLong();
             if (id != 1 && id != 0) {
                 System.out.println("Please select option\n");
                 continue;
@@ -346,29 +346,27 @@ public class TaxCalculator {
         return taxAmount;
     }
 
-    private Integer calcDeductionForForeignCompany(Integer income) {
-        Integer deduction = 0;
-
-        Integer ngoDonation, goDonation, totalDonation;
-        Integer netQualifyingLimit = 10*income/100;
+    private Double calcDeductionForForeignCompany(Double income) {
+        Double deduction = 0.0;
+        Double ngoDonation, goDonation, totalDonation;
+        Double netQualifyingLimit = 10.0*income/100.0;
         System.out.println("Enter your donation to any approved funds, trust, charitable institution:");
-        ngoDonation = scanner.nextInt();
+        ngoDonation = scanner.nextDouble();
         System.out.println("Enter your donation to any government funds:");
-        goDonation = scanner.nextInt();
+        goDonation = scanner.nextDouble();
         totalDonation = Math.min(ngoDonation + goDonation, netQualifyingLimit);
         deduction += totalDonation;
         return deduction;
     }
 
-    Integer calcTaxForIndividual(Integer taxableAmount, Integer regimeId, Integer ageGroupId){
+    private Double calcTaxForIndividual(Double taxableAmount, Long regimeId, Long ageGroupId){
 
-            Integer taxAmount = 0;
-
+            Double taxAmount = 0.0;
             ArrayList<ArrayList<Integer>> slabs = slab.get(regimeId).get(ageGroupId);
 
             for(int i=0;i<slabs.size();i++){
 
-                Integer minA=0;
+                Double minA=0.0;
                 if(taxableAmount <= 0)
                     break;
 
@@ -385,38 +383,38 @@ public class TaxCalculator {
             return taxAmount;
     }
 
-    Integer calcDeductionForIndividual(Integer income, Integer regimeId) throws InputMismatchException{
+    private Double calcDeductionForIndividual(Double income, Long regimeId) throws InputMismatchException{
 
-        Integer deductionAmount80c = 0;
-        Integer deductionAmount80ccd1b = 0;
-        Integer deductionAmount80d = 0;
+        Double deductionAmount80c = 0.0;
+        Double deductionAmount80ccd1b = 0.0;
+        Double deductionAmount80d = 0.0;
 
         // for old regime
         if(regimeId==1){
             System.out.println("Enter amount of Life Insurance Premium (0 if none)");
-            deductionAmount80c += scanner.nextInt();
+            deductionAmount80c += scanner.nextDouble();
             System.out.println("Enter amount of Provident Fund (0 if none)");
-            deductionAmount80c += scanner.nextInt();
+            deductionAmount80c += scanner.nextDouble();
             System.out.println("Enter value of equity shares that you hold (0 if none)");
-            deductionAmount80c += scanner.nextInt();
+            deductionAmount80c += scanner.nextDouble();
             System.out.println("Enter amount of tution fees (0 if none)");
-            deductionAmount80c += scanner.nextInt();
+            deductionAmount80c += scanner.nextDouble();
             deductionAmount80c = Math.min(deductionAmount80c, 1500000);
 
             System.out.println("Enter Pension Scheme of Central Goverment amount(0 if none)");
-            deductionAmount80ccd1b = Math.min(scanner.nextInt(), 50000);
+            deductionAmount80ccd1b = Math.min(scanner.nextDouble(), 50000);
 
         }
         // for new regime
         else{
             System.out.println("Enter Pension Scheme of Central Goverment amount(0 if none)");
-            deductionAmount80ccd1b = Math.min(scanner.nextInt(), 50000);
+            deductionAmount80ccd1b = Math.min(scanner.nextDouble(), 50000);
         }
 
         return deductionAmount80ccd1b + deductionAmount80c + deductionAmount80d;
     }
 
-    Integer calcSurchargeForIndividual(Integer taxAmount, Integer taxableAmount){
+    private Double calcSurchargeForIndividual(Double taxAmount, Double taxableAmount){
         Double surCharge = 0.0;
         if(taxableAmount>5000000 && taxableAmount<=10000000){
             surCharge = 0.1*taxAmount;
@@ -430,16 +428,13 @@ public class TaxCalculator {
         else if(taxableAmount>50000000){
             surCharge = 0.37*taxAmount;
         }
-
-        Integer var = surCharge.intValue();
-        return var;
+        return surCharge;
     }
 
-    Integer calcHealthAndEducationCess(Integer taxAmount){
+    Double calcHealthAndEducationCess(Double taxAmount){
         Double charge = 0.0;
         charge = 0.04*taxAmount;
-        Integer var = charge.intValue();
-        return var;
+        return charge;
     }
 
 }

@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a58bab6-21ca-40ac-8b7a-b42f9444fe70" name="Changes" comment="NPS Calculator in progress">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="8a58bab6-21ca-40ac-8b7a-b42f9444fe70" name="Changes" comment="Choosing calc done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/NPSCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/NPSCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TaxCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TaxCalculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +70,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.NPSCalculator">
+  <component name="RunManager" selected="Application.Calculator">
     <configuration name="Calculator" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="SaveMyTax" />
@@ -200,7 +198,8 @@
       <workItem from="1699950094240" duration="5661000" />
       <workItem from="1699966976040" duration="10596000" />
       <workItem from="1700041027890" duration="4531000" />
-      <workItem from="1700463382940" duration="20250000" />
+      <workItem from="1700463382940" duration="20484000" />
+      <workItem from="1700541063650" duration="1888000" />
     </task>
     <task id="LOCAL-00001" summary="Business Logic Done">
       <created>1699973879368</created>
@@ -279,7 +278,21 @@
       <option name="project" value="LOCAL" />
       <updated>1700502944909</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="NPS and TAX bit left to do">
+      <created>1700503877400</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1700503877400</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Choosing calc done">
+      <created>1700542107457</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1700542107457</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,7 +322,9 @@
     <MESSAGE value="Gratuity Calculator done" />
     <MESSAGE value="EMI Calculator done" />
     <MESSAGE value="NPS Calculator in progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="NPS Calculator in progress" />
+    <MESSAGE value="NPS and TAX bit left to do" />
+    <MESSAGE value="Choosing calc done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Choosing calc done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
