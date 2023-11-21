@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a58bab6-21ca-40ac-8b7a-b42f9444fe70" name="Changes" comment="Lumpsum Calculator - Data flow coverage criteria testing done" />
+    <list default="true" id="8a58bab6-21ca-40ac-8b7a-b42f9444fe70" name="Changes" comment="PPF Calculator - Data flow coverage criteria testing done">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/SIPCalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +71,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PPFCalculatorTest">
+  <component name="RunManager" selected="JUnit.SIPCalculatorTest">
     <configuration name="Calculator" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="SaveMyTax" />
@@ -79,20 +82,6 @@
           <option name="INCLUDE" value="true" />
         </include_pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NPSCalculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.NPSCalculator" />
-      <module name="SaveMyTax" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <extension name="recording" autostart="false" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -110,7 +99,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EMICalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EMICalculatorTest.testCase1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SaveMyTax" />
       <extension name="coverage">
         <pattern>
@@ -121,7 +110,8 @@
       <extension name="recording" autostart="true" />
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.EMICalculatorTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="testCase1" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -174,22 +164,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SIPCalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SaveMyTax" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="recording" autostart="true" />
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.SIPCalculatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Calculator" />
       <item itemvalue="Application.Unnamed" />
-      <item itemvalue="Application.NPSCalculator" />
-      <item itemvalue="JUnit.EMICalculatorTest" />
+      <item itemvalue="JUnit.EMICalculatorTest.testCase1" />
       <item itemvalue="JUnit.GratuityCalculatorTest" />
       <item itemvalue="JUnit.LumpsumCalculatorTest" />
       <item itemvalue="JUnit.PPFCalculatorTest" />
+      <item itemvalue="JUnit.SIPCalculatorTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SIPCalculatorTest" />
+        <item itemvalue="JUnit.EMICalculatorTest.testCase1" />
         <item itemvalue="JUnit.PPFCalculatorTest" />
         <item itemvalue="JUnit.LumpsumCalculatorTest" />
         <item itemvalue="JUnit.GratuityCalculatorTest" />
-        <item itemvalue="JUnit.EMICalculatorTest" />
-        <item itemvalue="Application.NPSCalculator" />
       </list>
     </recent_temporary>
   </component>
@@ -206,7 +212,7 @@
       <workItem from="1700041027890" duration="4531000" />
       <workItem from="1700463382940" duration="20484000" />
       <workItem from="1700541063650" duration="1888000" />
-      <workItem from="1700543592152" duration="6916000" />
+      <workItem from="1700543592152" duration="7245000" />
     </task>
     <task id="LOCAL-00001" summary="Business Logic Done">
       <created>1699973879368</created>
@@ -327,7 +333,21 @@
       <option name="project" value="LOCAL" />
       <updated>1700569879410</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="PPF Calculator - Data flow coverage criteria testing done">
+      <created>1700570451521</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1700570451521</updated>
+    </task>
+    <task id="LOCAL-00019" summary="PPF Calculator - Data flow coverage criteria testing done">
+      <created>1700570492027</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1700570492027</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,7 +383,8 @@
     <MESSAGE value="EMI Calculator - Data flow coverage criteria testing done" />
     <MESSAGE value="Gratuity Calculator - Data flow coverage criteria testing done" />
     <MESSAGE value="Lumpsum Calculator - Data flow coverage criteria testing done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lumpsum Calculator - Data flow coverage criteria testing done" />
+    <MESSAGE value="PPF Calculator - Data flow coverage criteria testing done" />
+    <option name="LAST_COMMIT_MESSAGE" value="PPF Calculator - Data flow coverage criteria testing done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -375,7 +396,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/EMICalculatorTest.java</url>
-          <line>16</line>
+          <line>15</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
