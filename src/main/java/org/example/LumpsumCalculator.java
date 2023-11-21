@@ -35,42 +35,46 @@ public class LumpsumCalculator {
     }
 
     public Long init(){
+        try
+        {
+            Scanner scanner = new Scanner(System.in);
+            Double val;
 
-        Scanner scanner = new Scanner(System.in);
-        Double val;
-        
-        while(true) {
-            System.out.print("Enter your total investment ( Principle Amount ) : ");
-            val = scanner.nextDouble();
-            if(val>0)
-                break;
-            System.out.println("Please Enter positive amount value :: ");
-        }
-        setPrincipleAmount(val);
-
-        while(true) {
-            System.out.print("Enter rate of interest : ");
-            val = scanner.nextDouble();
-            if(val>=0){
-                break;
+            while (true) {
+                System.out.print("Enter your total investment ( Principle Amount ) : ");
+                val = scanner.nextDouble();
+                if (val > 0)
+                    break;
+                System.out.println("Please Enter positive amount value :: ");
             }
-            System.out.println("Please Enter Non-negative interest rate in range 0 to 100 : ");
-        }
-        setInterestRate(val);
+            setPrincipleAmount(val);
 
-        while(true) {
-            System.out.print("Enter Time period of investment terms of no. of years : ");
-            val = scanner.nextDouble();
-            if(val>0){
-                break;
+            while (true) {
+                System.out.print("Enter rate of interest : ");
+                val = scanner.nextDouble();
+                if (val >= 0) {
+                    break;
+                }
+                System.out.println("Please Enter Non-negative interest rate in range 0 to 100 : ");
             }
-            System.out.println("Please Enter positive no. of years in  : ");
+            setInterestRate(val);
+
+            while (true) {
+                System.out.print("Enter Time period of investment terms of no. of years : ");
+                val = scanner.nextDouble();
+                if (val > 0) {
+                    break;
+                }
+                System.out.println("Please Enter positive no. of years in  : ");
+            }
+            setTimePeriod(val);
+
+            Long totalAmnt = calculateReturn();
+            System.out.println("Your total gain will be : " + totalAmnt);
+            return totalAmnt;
+        }catch (Exception e){
+            return -1L;
         }
-        setTimePeriod(val);
-        
-        Long totalAmnt = calculateReturn();
-        System.out.println("Your total gain will be : " + totalAmnt);
-        return totalAmnt;
     }
     
     private Long calculateReturn(){

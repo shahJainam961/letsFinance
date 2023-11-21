@@ -35,42 +35,46 @@ public class NPSCalculator {
     }
 
     public Long init(){
+        try
+        {
+            Scanner scanner = new Scanner(System.in);
+            Double val, ipm;
 
-        Scanner scanner = new Scanner(System.in);
-        Double val, ipm;
-        
-        while(true) {
-            System.out.print("Enter your investment per month : ");
-            ipm = scanner.nextDouble();
-            if(ipm>0)
-                break;
-            System.out.println("Please Enter positive amount value :: ");
-        }
-
-        while(true) {
-            System.out.print("Enter expected return rate in percentage : ");
-            val = scanner.nextDouble();
-            if(val>=0 && val<=100){
-                break;
+            while (true) {
+                System.out.print("Enter your investment per month : ");
+                ipm = scanner.nextDouble();
+                if (ipm > 0)
+                    break;
+                System.out.println("Please Enter positive amount value :: ");
             }
-            System.out.println("Please Enter Non-negative expected rate : ");
-        }
-        setExpectedReturnRatePerAnnum(val);
 
-        while(true) {
-            System.out.print("Enter your age : ");
-            val = scanner.nextDouble();
-            if(val>0 && val<=60){
-                break;
+            while (true) {
+                System.out.print("Enter expected return rate in percentage : ");
+                val = scanner.nextDouble();
+                if (val >= 0 && val <= 100) {
+                    break;
+                }
+                System.out.println("Please Enter Non-negative expected rate : ");
             }
-            System.out.println("Please Enter positive age : ");
+            setExpectedReturnRatePerAnnum(val);
+
+            while (true) {
+                System.out.print("Enter your age : ");
+                val = scanner.nextDouble();
+                if (val > 0 && val <= 60) {
+                    break;
+                }
+                System.out.println("Please Enter positive age : ");
+            }
+            setTimePeriod(60 - val);
+            setTotalInvestment(ipm * (60 - val) * 12);
+
+            Long totalValue = calculateReturn();
+            System.out.println("Your total value will be : " + totalValue);
+            return totalValue;
+        }catch (Exception e){
+            return -1L;
         }
-        setTimePeriod(60 - val);
-        setTotalInvestment(ipm*(60 - val)*12);
-        
-        Long totalValue = calculateReturn();
-        System.out.println("Your total value will be : " + totalValue);
-        return totalValue;
     }
     
     private Long calculateReturn(){
