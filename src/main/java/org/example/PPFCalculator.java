@@ -36,32 +36,37 @@ public class PPFCalculator {
     }
 
     public Long init(){
-        Double yi, tp;
-        Scanner scanner = new Scanner(System.in);
+        try{
+            Double yi, tp;
+            Scanner scanner = new Scanner(System.in);
 
-        while(true){
-            System.out.print("Enter your yearly investment amount : ");
-            yi = scanner.nextDouble();
-            if(yi>=0){
-                break;
+            while(true){
+                System.out.print("Enter your yearly investment amount : ");
+                yi = scanner.nextDouble();
+                if(yi>=0){
+                    break;
+                }
+                System.out.println("Please enter positive investment amount : ");
             }
-            System.out.println("Please enter positive investment amount : ");
-        }
-        setYearlyInvestmentAmount(yi);
+            setYearlyInvestmentAmount(yi);
 
-        while(true){
-            System.out.print("Enter time period for which you want to invest : ");
-            tp = scanner.nextDouble();
-            if(tp>=0){
-                break;
+            while(true){
+                System.out.print("Enter time period for which you want to invest : ");
+                tp = scanner.nextDouble();
+                if(tp>=0){
+                    break;
+                }
+                System.out.println("Please enter valid return rate");
             }
-            System.out.println("Please enter valid return rate");
-        }
-        setTimePeriodInYears(tp);
+            setTimePeriodInYears(tp);
 
-        Long totalValue = calculateReturn();
-        System.out.println("Your total value will be : " + totalValue);
-        return totalValue;
+            Long totalValue = calculateReturn();
+            System.out.println("Your total value will be : " + totalValue);
+            return totalValue;
+        }
+        catch(Exception e){
+            return -1L;
+        }
     }
 
     public Long calculateReturn(){

@@ -32,42 +32,47 @@ public class SIPCalculator {
     }
 
     public Long init(){
-        Double mi, tp, rr;
-        Scanner scanner = new Scanner(System.in);
+        try{
+            Double mi, tp, rr;
+            Scanner scanner = new Scanner(System.in);
 
-        while(true){
-            System.out.print("Enter your monthly investment amount : ");
-            mi = scanner.nextDouble();
-            if(mi>=0){
-                break;
+            while(true){
+                System.out.print("Enter your monthly investment amount : ");
+                mi = scanner.nextDouble();
+                if(mi>=0){
+                    break;
+                }
+                System.out.println("Please enter positive investment amount : ");
             }
-            System.out.println("Please enter positive investment amount : ");
-        }
-        setMonthlyInvestment(mi);
+            setMonthlyInvestment(mi);
 
-        while(true){
-            System.out.print("Enter Expected Return Rate in percentage (per annum) : ");
-            rr = scanner.nextDouble();
-            if(rr>=0){
-                break;
+            while(true){
+                System.out.print("Enter Expected Return Rate in percentage (per annum) : ");
+                rr = scanner.nextDouble();
+                if(rr>=0){
+                    break;
+                }
+                System.out.println("Please enter valid return rate");
             }
-            System.out.println("Please enter valid return rate");
-        }
-        setExpectedReturnRateInPercentage(rr*1.0/12);
+            setExpectedReturnRateInPercentage(rr*1.0/12);
 
-        while(true){
-            System.out.print("Enter time period for which you want to invest : ");
-            tp = scanner.nextDouble();
-            if(tp>=0){
-                break;
+            while(true){
+                System.out.print("Enter time period for which you want to invest : ");
+                tp = scanner.nextDouble();
+                if(tp>=0){
+                    break;
+                }
+                System.out.println("Please enter valid return rate");
             }
-            System.out.println("Please enter valid return rate");
-        }
-        setTimePeriodInYear(tp);
+            setTimePeriodInYear(tp);
 
-        Long totalValue = calculateReturn();
-        System.out.println("Your total value will be : " + totalValue);
-        return totalValue;
+            Long totalValue = calculateReturn();
+            System.out.println("Your total value will be : " + totalValue);
+            return totalValue;
+        }
+        catch(Exception e){
+            return -1L;
+        }
     }
 
     public Long calculateReturn(){

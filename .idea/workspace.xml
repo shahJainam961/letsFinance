@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a58bab6-21ca-40ac-8b7a-b42f9444fe70" name="Changes" comment="Choosing calc done">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TaxCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TaxCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PPFCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PPFCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SIPCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SIPCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SWPCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SWPCalculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,6 +201,7 @@
       <workItem from="1700041027890" duration="4531000" />
       <workItem from="1700463382940" duration="20484000" />
       <workItem from="1700541063650" duration="1888000" />
+      <workItem from="1700543592152" duration="882000" />
     </task>
     <task id="LOCAL-00001" summary="Business Logic Done">
       <created>1699973879368</created>
