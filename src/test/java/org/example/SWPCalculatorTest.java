@@ -5,8 +5,6 @@ import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
 
-import static org.junit.Assert.*;
-
 public class SWPCalculatorTest {
 
     String input1 = "-3500\n100000\n-5000\n5000\n5.5\n-2\n3\n"; // [0, 1, 2, 1, 2, 3, 4, 5, 4, 5, 6, 7, 8, 9, 8, 9, 10, 11, 12, 13, 14, 15, 16, 13, 17]
