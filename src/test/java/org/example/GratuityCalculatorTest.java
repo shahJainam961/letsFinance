@@ -2,10 +2,7 @@ package org.example;
 
 import org.junit.Assert;
 import org.junit.Test;
-
 import java.io.ByteArrayInputStream;
-
-import static org.junit.Assert.*;
 
 public class GratuityCalculatorTest {
     String input1 = "3400\n12\n"; // [0, 1, 2, 3, 4, 5, 6, 7, 8]

@@ -2,10 +2,7 @@ package org.example;
 
 import org.junit.Assert;
 import org.junit.Test;
-
 import java.io.ByteArrayInputStream;
-
-import static org.junit.Assert.*;
 
 public class LumpsumCalculatorTest {
     String input1 = "1000000\n5.5\n2\n"; // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
