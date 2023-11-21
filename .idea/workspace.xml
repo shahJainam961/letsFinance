@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a58bab6-21ca-40ac-8b7a-b42f9444fe70" name="Changes" comment="PPF Calculator - Data flow coverage criteria testing done">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/SIPCalculatorTest.java" afterDir="false" />
+    <list default="true" id="8a58bab6-21ca-40ac-8b7a-b42f9444fe70" name="Changes" comment="folder structure changed">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/SWPCalculatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TaxCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TaxCalculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +34,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/org/example/TaxCalculator.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -51,6 +55,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "extract.method.default.visibility": "private",
     "last_opened_file_path": "/media/dishang/STUDY/IIITB_TERM_3/CS731/SaveMyTax",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -64,6 +69,9 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/org/example/docs" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="org.example" />
     </key>
@@ -71,7 +79,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SIPCalculatorTest">
+  <component name="RunManager" selected="JUnit.SWPCalculatorTest">
     <configuration name="Calculator" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="SaveMyTax" />
@@ -112,22 +120,6 @@
       <option name="MAIN_CLASS_NAME" value="org.example.EMICalculatorTest" />
       <option name="METHOD_NAME" value="testCase1" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GratuityCalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SaveMyTax" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <extension name="recording" autostart="true" />
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GratuityCalculatorTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -180,22 +172,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SWPCalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SaveMyTax" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="recording" autostart="true" />
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.SWPCalculatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Calculator" />
       <item itemvalue="Application.Unnamed" />
       <item itemvalue="JUnit.EMICalculatorTest.testCase1" />
-      <item itemvalue="JUnit.GratuityCalculatorTest" />
       <item itemvalue="JUnit.LumpsumCalculatorTest" />
       <item itemvalue="JUnit.PPFCalculatorTest" />
       <item itemvalue="JUnit.SIPCalculatorTest" />
+      <item itemvalue="JUnit.SWPCalculatorTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SWPCalculatorTest" />
         <item itemvalue="JUnit.SIPCalculatorTest" />
         <item itemvalue="JUnit.EMICalculatorTest.testCase1" />
         <item itemvalue="JUnit.PPFCalculatorTest" />
         <item itemvalue="JUnit.LumpsumCalculatorTest" />
-        <item itemvalue="JUnit.GratuityCalculatorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -212,7 +220,7 @@
       <workItem from="1700041027890" duration="4531000" />
       <workItem from="1700463382940" duration="20484000" />
       <workItem from="1700541063650" duration="1888000" />
-      <workItem from="1700543592152" duration="7245000" />
+      <workItem from="1700543592152" duration="16692000" />
     </task>
     <task id="LOCAL-00001" summary="Business Logic Done">
       <created>1699973879368</created>
@@ -347,7 +355,21 @@
       <option name="project" value="LOCAL" />
       <updated>1700570492027</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="SIP Calculator - Data flow coverage criteria testing done">
+      <created>1700570896597</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1700570896597</updated>
+    </task>
+    <task id="LOCAL-00021" summary="folder structure changed">
+      <created>1700570953104</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1700570953104</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,7 +406,9 @@
     <MESSAGE value="Gratuity Calculator - Data flow coverage criteria testing done" />
     <MESSAGE value="Lumpsum Calculator - Data flow coverage criteria testing done" />
     <MESSAGE value="PPF Calculator - Data flow coverage criteria testing done" />
-    <option name="LAST_COMMIT_MESSAGE" value="PPF Calculator - Data flow coverage criteria testing done" />
+    <MESSAGE value="SIP Calculator - Data flow coverage criteria testing done" />
+    <MESSAGE value="folder structure changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="folder structure changed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
