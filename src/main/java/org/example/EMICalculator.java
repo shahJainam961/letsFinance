@@ -52,7 +52,7 @@ public class EMICalculator {
                 if(val>=0 && val<=100){
                     break;
                 }
-                System.out.println("Please Enter valif rate of interest: ");
+                System.out.println("Please Enter valid rate of interest: ");
             }
             setInterestRate(val);
 
