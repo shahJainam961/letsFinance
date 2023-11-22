@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a58bab6-21ca-40ac-8b7a-b42f9444fe70" name="Changes" comment="Main function modified">
+    <list default="true" id="8a58bab6-21ca-40ac-8b7a-b42f9444fe70" name="Changes" comment="Report added">
+      <change afterPath="$PROJECT_DIR$/MT2022039_MT2022156_ST_Project_Report.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -218,7 +219,7 @@
       <workItem from="1700463382940" duration="20484000" />
       <workItem from="1700541063650" duration="1888000" />
       <workItem from="1700543592152" duration="19630000" />
-      <workItem from="1700624814726" duration="9394000" />
+      <workItem from="1700624814726" duration="9765000" />
     </task>
     <task id="LOCAL-00001" summary="Business Logic Done">
       <created>1699973879368</created>
@@ -416,7 +417,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700631067315</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Report added">
+      <created>1700637885040</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1700637885040</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -434,7 +442,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Deduction added" />
     <MESSAGE value="test requirements and test paths calculated" />
     <MESSAGE value="TestCase Implemented" />
     <MESSAGE value="TestCases Implemented" />
@@ -459,7 +466,8 @@
     <MESSAGE value="EMI, Gratuity, Lumpsum, PPF, SIP Calculator - Data Flow Coverage (All defs and du-path coverage done)" />
     <MESSAGE value="SWP Calculator - Data Flow Coverage (All defs and du-path coverage done)" />
     <MESSAGE value="Main function modified" />
-    <option name="LAST_COMMIT_MESSAGE" value="Main function modified" />
+    <MESSAGE value="Report added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Report added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
