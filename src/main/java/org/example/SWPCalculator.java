@@ -97,21 +97,21 @@ public class SWPCalculator {
     private Double calculateReturn(){
 
         double deduct = getWithdrawalAmount().doubleValue();
-        double val = getTotalInvestment().doubleValue();
+        double val1 = getTotalInvestment().doubleValue();
         int n = getTimePeriod().intValue()*12;
         double rate = getExpectedReturnRate().doubleValue() / 12;
         double gain = 0;
 
-        for(int i=0;i<n && val>0;i++){
+        for(int i=0;i<n && val1>0;i++){
 
-            val -= deduct;
+            val1 -= deduct;
 
-            if(val <=0 )
+            if(val1 <=0 )
                 break;
 
-            double tmp = val * (rate/100);
+            double tmp = val1 * (rate/100);
             gain += tmp;
-            val += tmp;
+            val1 += tmp;
         }
 
         return gain;
