@@ -10,14 +10,14 @@ public class Main {
             Integer id = -1;
             while(true){
                 System.out.println("Which calculator you want to try?");
-                System.out.println("1. EMI\n2. Gratuity\n3. Lumpsum\n4. NPS\n5. PPF \n6. SIP\n7. SWP\n8. Tax\nPress any other key to exit\n");
+                System.out.println("1. EMI\n2. Gratuity\n3. Lumpsum\n4. PPF \n5. SIP\n6. SWP\n7. Tax\nPress any other key to exit\n");
                 try{
                     id = scanner.nextInt();
                 }
                 catch(InputMismatchException exception){
                     return;
                 }
-                if(id>=0 && id<9){
+                if(id>=0 && id<8){
                     break;
                 }
                 else{
@@ -41,27 +41,23 @@ public class Main {
                 calc.init();
             }
             else if(id==4){
-                NPSCalculator calc = new NPSCalculator();
-                calc.init();
-            }
-            else if(id==5){
                 PPFCalculator calc = new PPFCalculator();
                 calc.init();
             }
-            else if(id==6){
+            else if(id==5){
                 SIPCalculator calc = new SIPCalculator();
                 calc.init();
             }
-            else if(id==7){
+            else if(id==6){
                 SWPCalculator calc = new SWPCalculator();
                 calc.init();
             }
-            else if(id==8){
+            else if(id==7){
                 TaxCalculator calc = new TaxCalculator();
                 calc.init();
             }
         } catch (Exception exception){
-          return;
+            return;
         }
     }
 }
