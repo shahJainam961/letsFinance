@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a58bab6-21ca-40ac-8b7a-b42f9444fe70" name="Changes" comment="EMI, Gratuity, Lumpsum, PPF, SIP Calculator - Data Flow Coverage (All defs and du-path coverage done)">
+    <list default="true" id="8a58bab6-21ca-40ac-8b7a-b42f9444fe70" name="Changes" comment="Main function modified">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SWPCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SWPCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/SWPCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/SWPCalculatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +105,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EMICalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GratuityCalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SaveMyTax" />
       <extension name="coverage">
         <pattern>
@@ -117,7 +115,7 @@
       </extension>
       <extension name="recording" autostart="true" />
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.EMICalculatorTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.GratuityCalculatorTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -190,7 +188,7 @@
     <list>
       <item itemvalue="Application.Calculator" />
       <item itemvalue="Application.Unnamed" />
-      <item itemvalue="JUnit.EMICalculatorTest" />
+      <item itemvalue="JUnit.GratuityCalculatorTest" />
       <item itemvalue="JUnit.LumpsumCalculatorTest" />
       <item itemvalue="JUnit.PPFCalculatorTest" />
       <item itemvalue="JUnit.SIPCalculatorTest" />
@@ -199,10 +197,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.SWPCalculatorTest" />
-        <item itemvalue="JUnit.PPFCalculatorTest" />
         <item itemvalue="JUnit.SIPCalculatorTest" />
+        <item itemvalue="JUnit.PPFCalculatorTest" />
         <item itemvalue="JUnit.LumpsumCalculatorTest" />
-        <item itemvalue="JUnit.EMICalculatorTest" />
+        <item itemvalue="JUnit.GratuityCalculatorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -220,7 +218,7 @@
       <workItem from="1700463382940" duration="20484000" />
       <workItem from="1700541063650" duration="1888000" />
       <workItem from="1700543592152" duration="19630000" />
-      <workItem from="1700624814726" duration="4936000" />
+      <workItem from="1700624814726" duration="9394000" />
     </task>
     <task id="LOCAL-00001" summary="Business Logic Done">
       <created>1699973879368</created>
@@ -404,7 +402,21 @@
       <option name="project" value="LOCAL" />
       <updated>1700627070843</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="SWP Calculator - Data Flow Coverage (All defs and du-path coverage done)">
+      <created>1700630978980</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1700630978980</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Main function modified">
+      <created>1700631067315</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1700631067315</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,7 +434,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Business Logic Done" />
     <MESSAGE value="Deduction added" />
     <MESSAGE value="test requirements and test paths calculated" />
     <MESSAGE value="TestCase Implemented" />
@@ -446,7 +457,9 @@
     <MESSAGE value="SWP Calculator - Data Flow Coverage Criteria Done" />
     <MESSAGE value="bug fix" />
     <MESSAGE value="EMI, Gratuity, Lumpsum, PPF, SIP Calculator - Data Flow Coverage (All defs and du-path coverage done)" />
-    <option name="LAST_COMMIT_MESSAGE" value="EMI, Gratuity, Lumpsum, PPF, SIP Calculator - Data Flow Coverage (All defs and du-path coverage done)" />
+    <MESSAGE value="SWP Calculator - Data Flow Coverage (All defs and du-path coverage done)" />
+    <MESSAGE value="Main function modified" />
+    <option name="LAST_COMMIT_MESSAGE" value="Main function modified" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
