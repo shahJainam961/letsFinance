@@ -205,5 +205,4 @@ public class TaxCalculatorTest{
     public void testCase25(){
         testing(input25, 86826000);
     }
-
 }
