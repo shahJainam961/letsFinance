@@ -241,11 +241,11 @@ public class TaxCalculator {
                 setDeductedAmount(deductedAmount);
                 taxableAmount = income - deductedAmount;
                 setTaxableAmount(taxableAmount);
-                taxAmount = calcTaxForIndividual(taxableAmount, getRegimeId(), getAgeGroupId());
+                taxAmount = calcTaxForIndividual(getTaxableAmount(), getRegimeId(), getAgeGroupId());
                 setTaxAmount(taxAmount);
-                surCharge = calcSurchargeForIndividual(taxAmount, taxableAmount);
+                surCharge = calcSurchargeForIndividual(getTaxAmount(), getTaxableAmount());
                 setSurCharge(surCharge);
-                healthEduCess = calcHealthAndEducationCess(taxAmount);
+                healthEduCess = calcHealthAndEducationCess(getTaxAmount());
                 setHealthAndEduCess(healthEduCess);
                 setNetTax(getTaxAmount() + getSurCharge() + getHealthAndEduCess());
 
@@ -355,7 +355,7 @@ public class TaxCalculator {
     private Double calcTaxForIndividual(Double taxableAmount, Long regimeId, Long ageGroupId){
 
             Double taxAmount = 0.0;
-            ArrayList<ArrayList<Integer>> slabs = slab.get(regimeId).get(ageGroupId);
+            ArrayList<ArrayList<Integer>> slabs = slab.get(getRegimeId().intValue()).get(getAgeGroupId().intValue());
 
             for(int i=0;i<slabs.size() && taxableAmount>0;i++){
                 Double minA;

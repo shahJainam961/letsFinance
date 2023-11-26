@@ -40,22 +40,22 @@ public class SWPCalculatorTest {
 
     @Test
     public void testCase4(){
-        testing(input3, 4621L);
+        testing(input4, 4621L);
     }
 
     @Test
     public void testCase5(){
-        testing(input3, 4621L);
+        testing(input5, 4621L);
     }
 
     @Test
     public void testCase6(){
-        testing(input3, 4621L);
+        testing(input6, 4621L);
     }
 
     @Test
     public void testCase7(){
-        testing(input3, 4621L);
+        testing(input7, 4621L);
     }
 
 }
