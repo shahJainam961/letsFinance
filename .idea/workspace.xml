@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a58bab6-21ca-40ac-8b7a-b42f9444fe70" name="Changes" comment="testCase added Tax Calculator">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MT2022039_MT2022156_ST_Project_Report.docx" beforeDir="false" afterPath="$PROJECT_DIR$/MT2022039_MT2022156_ST_Project_Report.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MT2022039_MT2022156_ST_Project_Report.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/MT2022039_MT2022156_ST_Project_Report.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/TaxCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/TaxCalculatorTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="8a58bab6-21ca-40ac-8b7a-b42f9444fe70" name="Changes" comment="README File Added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -226,7 +221,7 @@
       <workItem from="1700819925424" duration="681000" />
       <workItem from="1700995286000" duration="37000" />
       <workItem from="1700997757807" duration="136000" />
-      <workItem from="1700999020919" duration="5481000" />
+      <workItem from="1700999020919" duration="5553000" />
     </task>
     <task id="LOCAL-00001" summary="Business Logic Done">
       <created>1699973879368</created>
@@ -452,7 +447,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701003084932</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="README File Added">
+      <created>1701004656090</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1701004656090</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +472,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="TestCase Implemented" />
     <MESSAGE value="TestCases Implemented" />
     <MESSAGE value="SIP Calculator done" />
     <MESSAGE value="PPF Calculator done" />
@@ -495,7 +496,8 @@
     <MESSAGE value="Main function modified" />
     <MESSAGE value="Report added" />
     <MESSAGE value="testCase added Tax Calculator" />
-    <option name="LAST_COMMIT_MESSAGE" value="testCase added Tax Calculator" />
+    <MESSAGE value="README File Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="README File Added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
