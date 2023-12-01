@@ -306,7 +306,7 @@ public class TaxCalculator {
         System.out.println("Enter your donation to any government funds:");
         goDonation = scanner.nextDouble();
         deduction = Math.min(ngoDonation + goDonation, netQualifyingLimit);
-        return deduction;
+        return Math.max(0,deduction);
     }
 
     private Double calcSurchargeForForeignCompany(Double taxAmount, Double taxableAmount) {
@@ -349,7 +349,7 @@ public class TaxCalculator {
         System.out.println("Enter your donation to any government funds:");
         goDonation = scanner.nextDouble();
         deduction = Math.min(ngoDonation + goDonation, netQualifyingLimit);
-        return deduction;
+        return Math.max(0,deduction);
     }
 
     private Double calcTaxForIndividual(Double taxableAmount, Long regimeId, Long ageGroupId){
@@ -400,7 +400,7 @@ public class TaxCalculator {
         }
 
         Double deduction = deductionAmount80ccd1b + deductionAmount80c;
-        return deduction;
+        return Math.max(0,deduction);
     }
 
     private Double calcSurchargeForIndividual(Double taxAmount, Double taxableAmount){

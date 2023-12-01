@@ -96,6 +96,17 @@ public class TaxCalculatorTest{
     String input25 = "2\n250000000\n200000\n300000\n4\n";
 
 
+    // Objective : finding bug in the code through test case
+
+    // providing negative value in the deduction, wrongfully increases the taxable amount
+    // because the statement min(deduction,150000), is not directly appropriate in this case
+
+    // following test case should give tax amount 75400, but instead gives 84715
+    // as negative deduction amount should be ignored
+    String input26 =  "1\n1\n1\n800000\n-10000\n-25000\n-1000\n-2000\n-6788\n";
+
+
+
 
     public void testing(String input, int expectedTax){
         ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(input.getBytes());
@@ -205,4 +216,9 @@ public class TaxCalculatorTest{
     public void testCase25(){
         testing(input25, 86826000);
     }
+    @Test
+    public void testCase26(){
+        testing(input26, 75400);
+    }
+
 }
