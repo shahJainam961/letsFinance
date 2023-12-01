@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a58bab6-21ca-40ac-8b7a-b42f9444fe70" name="Changes" comment="README File Added">
+    <list default="true" id="8a58bab6-21ca-40ac-8b7a-b42f9444fe70" name="Changes" comment="bug fix in taxation calculator's deduction amount function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TaxCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TaxCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/TaxCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/TaxCalculatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +224,7 @@
       <workItem from="1700995286000" duration="37000" />
       <workItem from="1700997757807" duration="136000" />
       <workItem from="1700999020919" duration="5553000" />
-      <workItem from="1701426215684" duration="2488000" />
+      <workItem from="1701426215684" duration="3413000" />
     </task>
     <task id="LOCAL-00001" summary="Business Logic Done">
       <created>1699973879368</created>
@@ -459,7 +457,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701004656090</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="bug fix in taxation calculator's deduction amount function">
+      <created>1701428996689</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1701428996689</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,7 +482,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="TestCases Implemented" />
     <MESSAGE value="SIP Calculator done" />
     <MESSAGE value="PPF Calculator done" />
     <MESSAGE value="SIP bug fix" />
@@ -502,7 +506,8 @@
     <MESSAGE value="Report added" />
     <MESSAGE value="testCase added Tax Calculator" />
     <MESSAGE value="README File Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="README File Added" />
+    <MESSAGE value="bug fix in taxation calculator's deduction amount function" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix in taxation calculator's deduction amount function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -524,5 +529,10 @@
         <PinnedItemInfo parentTag="java.util.HashMap$Node" memberName="key" />
       </pinned-members>
     </pin-to-top-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/letsFinance$TaxCalculatorTest.ic" NAME="TaxCalculatorTest Coverage Results" MODIFIED="1701428738242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.example.*</FILTER>
+    </SUITE>
   </component>
 </project>
